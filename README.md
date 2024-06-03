@@ -11,7 +11,7 @@
 
 Welcome to the Program Repository! This repository contains various programs written in different programming languages. Each program includes a link, name, language, and detailed description.
 
-## Day 1
+## [Day 1](#https://github.com/souvikpramanikgit/100-Days-of-Code/tree/main/Day%201)
 
 ### Program 1
 
