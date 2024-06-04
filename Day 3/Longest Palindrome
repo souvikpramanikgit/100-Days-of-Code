@@ -1,0 +1,22 @@
+// Link => https://leetcode.com/problems/longest-palindrome/description/?envType=daily-question&envId=2024-05-31
+
+class Solution {
+public:
+    int longestPalindrome(string s) {
+        unordered_set<char> charSet;
+        int l=0;
+        for(char c:s){
+            if(charSet.find(c)!=charSet.end()){
+                charSet.erase(c);
+                l+=2;
+            }
+            else{
+                charSet.insert(c);
+            }
+        }
+        if(!charSet.empty()){
+            l+=1;
+        }
+        return l;
+    }
+};
