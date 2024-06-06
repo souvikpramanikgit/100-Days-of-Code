@@ -1,0 +1,35 @@
+// Link => https://leetcode.com/problems/hand-of-straights/description/?envType=daily-question&envId=2024-06-06
+
+class Solution {
+public:
+    bool isNStraightHand(vector<int>& hand, int groupSize) {
+        if (hand.size() % groupSize != 0) {
+            return false;
+        }
+
+        unordered_map<int, int> count;
+        for (int card : hand) {
+            count[card]++;
+        }
+
+        vector<int> sortedKeys;
+        for (auto& pair : count) {
+            sortedKeys.push_back(pair.first);
+        }
+        sort(sortedKeys.begin(), sortedKeys.end());
+
+        for (int key : sortedKeys) {
+            if (count[key] > 0) {
+                int startCount = count[key];
+                // Check and form a group starting from `key`
+                for (int i = key; i < key + groupSize; i++) {
+                    if (count[i] < startCount) {
+                        return false;
+                    }
+                    count[i] -= startCount;
+                }
+            }
+        }
+        return true;
+    }
+};
