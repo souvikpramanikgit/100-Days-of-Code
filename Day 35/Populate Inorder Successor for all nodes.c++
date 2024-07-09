@@ -16,6 +16,7 @@ struct Node
         next = NULL;
     }
 };
+
 */
 class Solution {
     void inorder(Node* a,Node **pre){
