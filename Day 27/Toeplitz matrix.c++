@@ -6,7 +6,6 @@ bool isToeplitz(vector<vector<int>>& mat) {
     int m=mat[0].size();
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
-            
             int a=i-1;
             int b=j-1;
             if(a>=0 && b>=0){
