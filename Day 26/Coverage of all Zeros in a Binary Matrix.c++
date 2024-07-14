@@ -3,7 +3,6 @@
 class Solution {
   public:
     int findCoverage(vector<vector<int>>& matrix) {
-        // Code here
         int row=matrix.size(), col= matrix[0].size();
         int ans =0;
         for(int i=0;i<row;i++){
