@@ -6,7 +6,9 @@ class Solution {
         int row=matrix.size(), col= matrix[0].size();
         int ans =0;
         for(int i=0;i<row;i++){
+          
             for(int j=0;j<col;j++){
+              
                 if(matrix[i][j]==0) {
                     if(i>0) {
                         if(matrix[i-1][j]==1) ans++;
