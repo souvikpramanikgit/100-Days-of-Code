@@ -7,7 +7,6 @@ class Solution {
         // Code Here
         int n = arr.size();
         bool isDone = true;
-        
         // Check row symmetry
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n/2; j++){
