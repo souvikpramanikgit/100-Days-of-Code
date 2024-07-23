@@ -16,7 +16,6 @@ struct Node {
 bool areIdentical(struct Node *head1, struct Node *head2) {
     // Code here
     Node* temp1 = head1;
-  
       Node* temp2 = head2;
       while(temp1 != NULL || temp2 != NULL)
       {
