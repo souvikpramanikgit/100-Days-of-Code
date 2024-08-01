@@ -5,6 +5,7 @@ class Solution {
     long long int InternalCount(long long int p[], long long int q[],
                                 long long int r[]) {
         // code here
+      
         long long area = 0;
 
         area+=(p[0]*q[1]) - (p[1]*q[0]);
