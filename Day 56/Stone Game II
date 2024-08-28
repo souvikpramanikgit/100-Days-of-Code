@@ -6,8 +6,11 @@ public:
         int n=piles.size();
 
         vector<vector<int>> dp(n,vector<int>(n+1,0));
+
         vector<int> suffixSum(n,0);
+
         suffixSum[n-1]=piles[n-1];
+
         for(int i=n-2;i>=0;i--){
             suffixSum[i]=suffixSum[i+1]+piles[i];
         }
