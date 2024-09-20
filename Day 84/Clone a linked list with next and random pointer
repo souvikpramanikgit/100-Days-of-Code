@@ -1,0 +1,24 @@
+// Link => https://www.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1
+
+struct Node {
+    int data;
+    Node *next;
+    Node *random;
+
+    Node(int x) {
+        data = x;
+        next = NULL;
+        random = NULL;
+    }
+};*/
+
+class Solution {
+  public:
+    Node *copyList(Node *head) {
+        // Write your code 
+        if(head==nullptr){
+            return nullptr;
+        }
+        return head;
+    }
+};
