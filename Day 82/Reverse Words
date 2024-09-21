@@ -2,7 +2,6 @@
 
 class Solution {
   public:
-    // Function to reverse words in a given string.
     string reverseWords(string str) {
         vector<string> words;
         string word;
