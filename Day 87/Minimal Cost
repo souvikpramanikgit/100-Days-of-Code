@@ -1,0 +1,21 @@
+// Link => https://www.geeksforgeeks.org/problems/minimal-cost/1
+
+class Solution {
+  public:
+    int minimizeCost(int k, vector<int>& arr) {
+        // Code here
+        
+        int n=arr.size();
+        
+        vector<int> dp(n,0);
+        
+        for(int i=1;i<n;i++){
+            dp[i]=INT_MAX;
+            for(int j=max(0,i-k);j<i;j++){
+                dp[i]=min(dp[i],dp[j]+abs(arr[i]-arr[j]));
+            }
+        }
+        
+        return dp[n-1];
+    }
+};
