@@ -1,0 +1,37 @@
+// Link => https://www.geeksforgeeks.org/problems/merge-two-bst-s/1
+
+/*
+struct Node {
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+*/
+class Solution {
+    private:
+        void dfs(vector<int> &v,Node *node){
+            if(node->left){
+                dfs(v,node->left);
+            }
+            v.push_back(node->data);
+            if(node->right){
+                dfs(v,node->right);
+            }
+        }
+    public:
+        // Function to return a list of integers denoting the node
+        // values of both the BST in a sorted order.
+        vector<int> merge(Node *root1, Node *root2) {
+            // Your code here
+            vector<int> li;
+            dfs(li,root1);
+            dfs(li,root2);
+            sort(li.begin(),li.end());
+            return li;
+        }
+};
