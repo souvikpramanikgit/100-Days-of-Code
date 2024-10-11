@@ -7,7 +7,6 @@ class Solution {
         if(i>=arr.size()){
             return NULL;
         }
-        
         root=new TreeNode(arr[i]);
         root->left=buildTree(2*i+1,arr,root->left);
         root->right=buildTree(2*i+2,arr,root->right);
