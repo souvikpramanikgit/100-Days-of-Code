@@ -9,6 +9,7 @@ public:
 
         while (missing <= n) {
             if (index < nums.size() && nums[index] <= missing) {
+                
                 missing += nums[index];
                 index++;
             } else {
