@@ -9,7 +9,6 @@ public:
         for (int i = 0; i < difficulty.size(); ++i) {
             maxProfitUpToDifficulty[difficulty[i]] = max(maxProfitUpToDifficulty[difficulty[i]], profit[i]);
         }
-
         for (int i = 1; i <= maxDifficulty; ++i) {
             maxProfitUpToDifficulty[i] = max(maxProfitUpToDifficulty[i], maxProfitUpToDifficulty[i - 1]);
         }
