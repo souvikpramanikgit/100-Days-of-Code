@@ -14,6 +14,7 @@ public:
                 neg.push_back(nums[i]);
             }
         }
+
         int posIndex = 0, negIndex = 0;
         for(int i = 0; i < nums.size(); i++) {
             if(i % 2 == 0) {
