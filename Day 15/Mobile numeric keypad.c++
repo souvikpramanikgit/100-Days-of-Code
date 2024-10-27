@@ -10,7 +10,6 @@ class Solution {
             dp[j] = 1;
         }
     
-    
         vector<vector<int>> vec(10);
         vec[0] = {0, 8};
         vec[1] = {1, 2, 4};
