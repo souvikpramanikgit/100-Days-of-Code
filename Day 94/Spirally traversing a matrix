@@ -1,0 +1,35 @@
+// Link -> https://www.geeksforgeeks.org/batch/gfg-160-problems/track/matrix-gfg-160/problem/spirally-traversing-a-matrix-1587115621
+
+class Solution {
+  public:
+    vector<int> spirallyTraverse(vector<vector<int> > &mat) {
+        // code here
+        int n=mat.size(),m=mat[0].size();
+        int l=0,r=m-1;
+        int top=0,bottom=n-1;
+        vector<int> ans;
+        while(top<=bottom && l<=r){
+            for(int i=l;i<=r;i++){
+                ans.push_back(mat[top][i]);
+            }
+            top++;
+            for(int i=top;i<=bottom;i++){
+                ans.push_back(mat[i][r]);
+            }
+            r--;
+            if(top<=bottom){
+                for(int i=r;i>=l;i--){
+                    ans.push_back(mat[bottom][i]);
+                }
+                bottom--;
+            }
+            if(l<=r){
+                for(int i=bottom;i>=top;i--){
+                    ans.push_back(mat[i][l]);
+                }
+                l++;
+            }
+        }
+        return ans;
+    }
+};
